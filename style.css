@@ -1,0 +1,240 @@
+:root {
+    --primary-color: #3d52a0; /* Green */
+    --secondary-color: #7091e6; /* Blue */
+    --accent-color: #8697c4; /* Orange */
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+header h1 {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.time-info {
+    text-align: right;
+    flex: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.profileBox {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* background-color: var(--secondary-color); */
+}
+
+.profile-container img {
+    margin-right: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-info {
+    max-width: 500px;
+    text-align: center;
+    flex: 1;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.links a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #ddd;
+}
+
+.goals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.goalsHeader {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.goals-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    width: 100%;
+}
+
+.goal-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+small{
+    color: black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        text-align: center;
+        flex: 1 100%;
+    }
+
+    .time-info {
+        text-align: center;
+        flex: 1 100%;
+    }
+
+    .profileBox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-container img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .goals-container {
+        grid-template-columns: 1fr;
+    }
+
+    .goal-box {
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profileBox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .goals-container {
+        grid-template-columns: 1fr;
+    }
+
+    .goal-box {
+        width: 80%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .profileBox {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .goals-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .goal-box {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        flex: 1;
+        text-align: left;
+    }
+
+    .time-info {
+        flex: 0;
+    }
+
+    .profileBox {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .goals-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .goal-box {
+        width: 80%;
+    }
+}
